@@ -1,153 +1,130 @@
-/* VIDEO DE FONDO GLOBAL */
+/* VIDEO GLOBAL */
 #video-fondo {
-    position: fixed;      
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;    
-    z-index: -1;          
-    pointer-events: none; 
+    object-fit: cover;
+    z-index: -1;
 }
 
+/* BODY */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
+    background: transparent;
 }
 
 /* CABECERA */
 .cabecera {
     text-align: center;
-    padding: 20px;
-    background-color: #3a6ea5; /* azul lluvia */
+    padding: 15px;
+    background-color: #3a6ea5;
     border-bottom: 2px solid #2f5c8a;
 }
 
 .cabecera h1 {
     color: white;
+    font-size: 2.5vw;
 }
 
-
-/* MENÚ */
+/* MENU */
 .menu {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #d9dde2; 
-    padding: 12px;
+    background-color: #d9dde2;
+    padding: 10px;
 }
-
-
 
 .menu a {
     text-decoration: none;
-    color: #2c4f6d; 
+    color: #2c4f6d;
     font-weight: bold;
+    font-size: 1vw;
 }
 
 .menu a:hover {
-    color: #3a6ea5; 
+    color: #3a6ea5;
 }
 
-
-/* ZONA DESCUENTO */
+/* DESCUENTO */
 .descuento {
-    width: 80%;
-    height: 200px;
-    margin: 40px auto;
+    width: 75%;
+    height: 35vh;
+    margin: 30px auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
-
+    background-color: rgba(0,0,0,0.25);
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: white;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .descuento:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 0 20px rgba(0,0,0,0.6); 
-    cursor: pointer; 
+    transform: scale(1.03);
 }
 
 .video-fondo {
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 0; 
 }
 
 .descuento h2 {
-    font-size: 32px;
+    z-index: 1;
     text-shadow: 2px 2px 5px black;
-    z-index: 1; 
+    font-size: 2.5vw;
 }
 
-/* ZONA NOVEDADES */
+/* NOVEDADES */
 .novedades {
-    width: 80%;
-    height: 200px;
-    margin: 40px auto;
-    background-image: url("novedades.jpg"); 
+    width: 75%;
+    height: 35vh;
+    margin: 30px auto;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../FOTOS/NEW.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .novedades:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 0 20px rgba(0,0,0,0.6); 
-    cursor: pointer; 
+    transform: scale(1.03);
 }
 
 .novedades h2 {
-    font-size: 32px;
+    font-size: 2.5vw;
     text-shadow: 2px 2px 5px black;
 }
 
-
-
-/* ZONA FOOTER */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
+/* TARJETAS */
 .tarjetas {
     width: 80%;
-    margin: 60px auto;
+    margin: 50px auto;
     display: flex;
     gap: 25px;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tarjeta {
     flex: 1;
-    background-color: white;
+    min-width: 250px;
+    background: white;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    padding: 20px;
-    cursor: pointer;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -156,60 +133,50 @@ body {
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-/* TÍTULO */
 .tarjeta h3 {
-    margin: 0;
-    font-size: 22px;
-    color: #2c4f6d;
     text-align: center;
+    color: #2c4f6d;
+    font-size: 1.8vw;
+    margin-bottom: 15px;
 }
 
-/* GALERÍA OCULTA */
+/* GALERIA */
 .galeria {
     max-height: 0;
     overflow: hidden;
     display: flex;
+    gap: 20px;
     justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
-
     transition: max-height 0.5s ease;
 }
 
-/* SE ABRE HACIA ABAJO */
 .tarjeta:hover .galeria {
-    max-height: 180px;
+    max-height: 220px;
 }
 
-/* IMÁGENES */
 .galeria img {
-    width: 100px;
-    height: 70px;
+    width: 180px;
+    height: 120px;
     object-fit: cover;
     border-radius: 4px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* FOOTER */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5vw;
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
-    /* CABECERA */
     .cabecera h1 {
-        font-size: 24px;
+        font-size: 6vw;
     }
 
-    /* MENÚ */
     .menu {
         flex-direction: column;
         align-items: center;
@@ -217,44 +184,40 @@ body {
 
     .menu a {
         margin: 10px 0;
-        font-size: 18px;
+        font-size: 5vw;
     }
 
-    /* DESCUENTO y NOVEDADES */
-    .descuento,
-    .novedades {
+    .descuento, .novedades {
         width: 95%;
-        height: 180px;
+        height: 30vh;
     }
 
-    /* TARJETAS  */
+    .descuento h2, .novedades h2 {
+        font-size: 6vw;
+    }
+
     .tarjetas {
         flex-direction: column;
         width: 95%;
         gap: 20px;
     }
 
-    .tarjeta {
-        transform: none;
+    .tarjeta h3 {
+        font-size: 5vw;
     }
 
-    .tarjeta:hover {
-        transform: none;
-    }
-
-    /* GALERÍA */
     .galeria {
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .galeria img {
-        width: 45%;
-        height: 80px;
+        width: 60%;
+        height: auto;
     }
 
-    /* FOOTER */
     .footer {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 25px;
     }
 }
