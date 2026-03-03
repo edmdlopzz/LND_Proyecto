@@ -23,7 +23,7 @@
     <a href="#">Inicio</a>
     <a href="#">Productos</a>
     <a href="#">Novedades</a>
-    <a href="formulario.html">Registro</a>
+    <a href="formulario.html">Registrate</a>
 </nav>
 
 <!-- DESCUENTO -->
@@ -74,6 +74,13 @@
 <footer class="footer">
     <p>© 2026 Mundo Mueble</p>
 </footer>
+
+<script>
+    document.querySelector(".menu a").addEventListener("click", function(event) {
+        event.preventDefault();
+        alert("¡Bienvenido a Mundo Mueble!");
+    });
+</script>
 
 </body>
 </html>
