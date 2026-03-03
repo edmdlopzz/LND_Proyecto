@@ -33,11 +33,23 @@
     </video>
     <h2>10% Descuento</h2>
 </section>
+<div class="contenido-extra" id="extra-descuento">
+    <img src="FOTOS/MUEBLE1.jpg">
+    <img src="FOTOS/MUEBLE2.jpg">
+    <img src="FOTOS/MUEBLE3.jpg">
+ <img src="FOTOS/MUEBLE10.jpg">
+</div>
 
 <!-- NOVEDADES -->
 <section class="novedades">
     <h2>Novedades</h2>
 </section>  
+<div class="contenido-extra" id="extra-novedades">
+    <img src="FOTOS/MUEBLE5.jpg">
+    <img src="FOTOS/MUEBLE6.jpg">
+    <img src="FOTOS/MUEBLE7.jpg">
+ <img src="FOTOS/MUEBLE8.jpg">
+</div>
 
 <!-- TARJETAS -->
 <section class="tarjetas">
@@ -76,9 +88,22 @@
 </footer>
 
 <script>
+    // Mensaje del menú
     document.querySelector(".menu a").addEventListener("click", function(event) {
         event.preventDefault();
         alert("¡Bienvenido a Mundo Mueble!");
+    });
+
+   
+    document.querySelector(".descuento").addEventListener("click", function() {
+        let contenido = document.getElementById("extra-descuento");
+        contenido.style.display = contenido.style.display === "flex" ? "none" : "flex";
+    });
+
+    
+    document.querySelector(".novedades").addEventListener("click", function() {
+        let contenido = document.getElementById("extra-novedades");
+        contenido.style.display = contenido.style.display === "flex" ? "none" : "flex";
     });
 </script>
 

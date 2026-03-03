@@ -83,6 +83,24 @@ body {
     font-size: 2.5vw;
 }
 
+#extra-descuento {
+    width: 75%;
+    margin: 20px auto 30px auto;
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#extra-descuento img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
 /* NOVEDADES */
 .novedades {
     width: 75%;
@@ -107,6 +125,26 @@ body {
     font-size: 2.5vw;
     text-shadow: 2px 2px 5px black;
 }
+
+#extra-novedades {
+    width: 75%;
+    margin: 20px auto 30px auto;
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#extra-novedades img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
 
 /* TARJETAS */
 .tarjetas {
